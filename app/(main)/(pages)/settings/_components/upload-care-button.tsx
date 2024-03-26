@@ -17,13 +17,12 @@ export const UploadCareButton = ({ onUpload }: Props) => {
 
   useEffect(() => {
     const handleUpload = async (e: any) => {
-      const file = onUpload(e.detail.cdnUrl);
+      const file = await onUpload(e.detail.cdnUrl);
       if (file) {
         router.refresh();
       }
     };
-
-    ctxProviderRef?.current.addEventListener(
+    ctxProviderRef.current.addEventListener(
       "file-upload-success",
       handleUpload
     );
