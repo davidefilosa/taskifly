@@ -23,7 +23,7 @@ export const UploadCareButton = ({ onUpload }: Props) => {
       }
     };
 
-    ctxProviderRef.current.addEventListener(
+    ctxProviderRef?.current.addEventListener(
       "file-upload-success",
       handleUpload
     );
