@@ -9,8 +9,8 @@ import { UploadCareButton } from "./upload-care-button";
 
 type Props = {
   userImage: string | null;
-  onDelete?: () => void;
-  onUpload: () => void;
+  onDelete?: any;
+  onUpload: any;
 };
 
 export const ProfilePicture = ({ userImage, onUpload, onDelete }: Props) => {

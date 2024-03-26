@@ -16,12 +16,17 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Loader2 } from "lucide-react";
 
+type Props = {
+  user: any;
+  onUpdate?: any;
+};
+
 const formSchema = z.object({
   name: z.string().min(1, "Required").max(50),
   email: z.string().email("Required"),
 });
 
-export const ProfileForm = () => {
+export const ProfileForm = ({ user, onUpdate }: Props) => {
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
