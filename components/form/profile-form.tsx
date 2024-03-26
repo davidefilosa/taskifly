@@ -41,7 +41,7 @@ export const ProfileForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-6 max-w-xl"
+        className="flex flex-col gap-6 "
       >
         <FormField
           disabled={isLoading}
@@ -63,7 +63,7 @@ export const ProfileForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg">Emaile</FormLabel>
+              <FormLabel className="text-lg">Email</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Email" type="email" />
               </FormControl>
