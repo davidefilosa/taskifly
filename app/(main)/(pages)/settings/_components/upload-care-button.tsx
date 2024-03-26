@@ -16,7 +16,7 @@ export const UploadCareButton = ({ onUpload }: Props) => {
   >(null);
 
   useEffect(() => {
-    if (!ctxProviderRef) return;
+    if (!ctxProviderRef.current) return;
     const handleUpload = async (e: any) => {
       const file = await onUpload(e.detail.cdnUrl);
       if (file) {
