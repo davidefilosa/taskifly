@@ -12,7 +12,7 @@ LR.registerBlocks(LR);
 export const UploadCareButton = ({ onUpload }: Props) => {
   const router = useRouter();
   const ctxProviderRef = useRef<
-    typeof LR.UploadCtxProvider.prototype & LR.UploadCtxProvider
+    (typeof LR.UploadCtxProvider.prototype & LR.UploadCtxProvider) | null
   >(null);
 
   useEffect(() => {
